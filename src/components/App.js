@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import TodoList from "./TodoList";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <h2>Parent Component</h2>
+      <h1>Parent Component</h1>
       <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   );

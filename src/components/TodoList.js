@@ -1,7 +1,8 @@
+import React from "react";
 function TodoList({ todos, handleComplete }) {
   return (
     <div>
-      <h3>Child Component</h3>
+      <h2>Child Component</h2>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
