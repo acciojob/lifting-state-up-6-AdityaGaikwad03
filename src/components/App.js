@@ -16,10 +16,17 @@ function App() {
     );
   }
 
+  // 🔑 Check if ANY todo is completed
+  const anyCompleted = todos.some((t) => t.completed);
+
   return (
     <div>
       <h1>Parent Component</h1>
-      <TodoList todos={todos} handleComplete={handleComplete} />
+      <TodoList
+        todos={todos}
+        handleComplete={handleComplete}
+        anyCompleted={anyCompleted}
+      />
     </div>
   );
 }
