@@ -11,22 +11,17 @@ function App() {
   function handleComplete(id) {
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: true } : todo
+        todo.id === id
+          ? { ...todo, completed: true }
+          : todo
       )
     );
   }
 
-  // 🔑 Check if ANY todo is completed
-  const anyCompleted = todos.some((t) => t.completed);
-
   return (
     <div>
       <h1>Parent Component</h1>
-      <TodoList
-        todos={todos}
-        handleComplete={handleComplete}
-        anyCompleted={anyCompleted}
-      />
+      <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   );
 }

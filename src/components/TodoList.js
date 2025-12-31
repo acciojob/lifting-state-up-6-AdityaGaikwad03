@@ -1,5 +1,6 @@
 import React from "react";
-function TodoList({ todos, handleComplete, anyCompleted }) {
+
+function TodoList({ todos, handleComplete }) {
   return (
     <div>
       <h2>Child Component</h2>
@@ -8,8 +9,7 @@ function TodoList({ todos, handleComplete, anyCompleted }) {
           <li key={todo.id}>
             {todo.text}
 
-            {/* 🔴 IMPORTANT: remove ALL buttons once any is completed */}
-            {!anyCompleted && (
+            {!todo.completed && (
               <button onClick={() => handleComplete(todo.id)}>
                 Complete
               </button>
