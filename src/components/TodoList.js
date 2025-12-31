@@ -8,9 +8,10 @@ function TodoList({ todos, handleComplete }) {
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.text}
-
             {!todo.completed && (
-              <button onClick={() => handleComplete(todo.id)}>Complete</button>
+              <button onClick={() => handleComplete(todo.id)}>
+                Complete
+              </button>
             )}
           </li>
         ))}
