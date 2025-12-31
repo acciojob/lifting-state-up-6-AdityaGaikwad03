@@ -9,14 +9,8 @@ function App() {
   ]);
 
   function handleComplete(id) {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id
-          ? { ...todo, completed: true }
-          : todo
-      )
-    );
-  }
+  setTodos(todos.map(todo => ({ ...todo, completed: true })));
+}
 
   return (
     <div>
