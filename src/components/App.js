@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 
 function App() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: "Learn React", completed: false },
-    { id: 2, text: "Build a React app", completed: false },
-    { id: 3, text: "Deploy the React app", completed: false },
-  ]);
-
-  function handleComplete(id) {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: true } : todo
-      )
-    );
-  }
+  const [done1, setDone1] = useState(false);
+  const [done2, setDone2] = useState(false);
+  const [done3, setDone3] = useState(false);
 
   return (
     <div>
       <h1>Parent Component</h1>
-      <TodoList todos={todos} handleComplete={handleComplete} />
+
+      <TodoList
+        done1={done1}
+        done2={done2}
+        done3={done3}
+        setDone1={setDone1}
+        setDone2={setDone2}
+        setDone3={setDone3}
+      />
     </div>
   );
 }
